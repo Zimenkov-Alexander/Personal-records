@@ -1,4 +1,13 @@
 .app {
+  box-sizing: border-box;
   margin: 0 auto;
-  max-width: 800px;
+  padding: 20px;
+  max-width: 1000px;
+  border-radius: 40px;
+  background-color: #3a3b3c;;
+}
+
+.btn-outline-secondary{
+	color: rgba(190, 190, 190);
+	border-color: rgba(190, 190, 190);
 }

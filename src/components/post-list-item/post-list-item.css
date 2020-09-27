@@ -1,6 +1,7 @@
 .app-list-item {
   font-size: 1.25rem;
-  color: #ccaa00;
+  color: #ffd700;
+  
 }
 .app-list-item button {
   width: 35px;
@@ -9,10 +10,12 @@
   font-size: 17px;
   border: none;
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
 }
 .app-list-item button:focus {
     box-shadow: none;
-    outline: none;
+	outline: none;
+	background-color: rgba(0, 0, 0, 0.1);
 }
 .app-list-item .btn-star {
     color: #FFD700;
@@ -28,10 +31,9 @@
     font-size: 16px;
     color: red;
     transition: 0.3s all;
-    transform: translateX(30px);
+    transform: translateX(-30px);
     opacity: 0;
 }
-
 .app-list-item-label {
   display: block;
   line-height: 35px;
@@ -46,7 +48,7 @@
 }
 
 .app-list-item.important .app-list-item-label {
-  color: #000000;
+  color: #aeaeae;
 }
 
 .app-list-item.important .btn-star {
@@ -54,4 +56,7 @@
 }
 .btn-sm{
 	background-color:white;
+}
+.list-group-item{
+	background-color: rgba(0, 0, 0, 0.3);
 }
