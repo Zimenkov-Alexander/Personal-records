@@ -1,23 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './post-list-item.css';
 
-const PostListItem = () => {
-	return (
-		<li className="app-list-item d-flex justify-content-between">
-			<span className="app-list-item-label">
-				Привет
-			</span>
-			<div className="d-flex justify-content-center align-items-center">
-				<button type="button" className="btn-star btn-sm">
-					<i className="fa fa-star"></i>
-				</button>
-				<button type="button" className="btn-trash btn-sm">
-					<i className="fa fa-trash-o"></i>
-				</button>
-				<i className="fa fa-heart"></i>
-			</div>
-		</li>
-	)
-};
+export default class PostListItem extends Component{
 
-export default PostListItem;
+	render(){
+		const {label, onDelete, onToggleImport, onToggleLiked,  important, like} = this.props;
+
+		let classNames = 'app-list-item d-flex justify-content-between';
+		// console.log(like);
+		if (!important) {
+			classNames += ' important';
+			}
+		if (like) {
+			classNames += ' like';
+			}
+
+		return (
+			<div className={classNames}>
+				<span onClick={onToggleLiked} className="app-list-item-label">
+					{label}
+				</span>
+				<div className="d-flex justify-content-center align-items-center">
+					<i className="fa fa-check"></i>
+					<button onClick={onToggleImport}  type="button" className="btn-star btn-sm">
+						<i className="fa fa-star"></i>
+					</button>
+					<button onClick={onDelete} type="button" className="btn-trash btn-sm">
+						<i className="fa fa-trash-o"></i>
+					</button>
+					
+				</div>
+			</div>
+		)
+	}
+}

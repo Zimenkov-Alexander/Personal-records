@@ -1,9 +1,17 @@
 .bottom-panel {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .bottom-panel .new-post-label {
   width: auto;
   flex-grow: 1;
-  margin-right: 3px;
+}
+.form-control{
+	color: rgb(196, 196, 196);
+	margin-right: 10px;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.form-control:focus{
+	color: white;
+	background-color: rgba(0, 0, 0, 0.6);
 }

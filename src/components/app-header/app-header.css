@@ -1,16 +1,40 @@
 .app-header {
+  margin: 1rem 0;
   align-items: flex-end;
   justify-content: space-between;
 
 }
-
-.app-header h1 {
-  /* width: 150px;
-  height: 150px; */
+.app-header.title{
+  position: relative;
   font-size: 26px;
+}
+
+.app-header.title::after{
+	opacity: 0;
+	position: absolute;
+	content: '';
+	border-radius: 50%;
+	background-image: url('https://media-exp1.licdn.com/dms/image/C4E03AQHswxbBOf44fQ/profile-displayphoto-shrink_200_200/0?e=1606953600&v=beta&t=7Pnhbev7rK3fSSmJyMFUTzreYaWnq4y5GqRbdJcGRL4');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	top: 0;
+	right: 0;
+
+	margin-top: -30px;
+	margin-right: -100px;
+	
+	width: 80px;
+	height: 80px;
+	transition: 2s;
+}
+
+.app-header.title:hover::after{
+	transition: 1s;
+	opacity: 1;
 }
 
 .app-header h2 {
   font-size: 1.2rem;
-  color: grey;
+  color: rgb(255, 255, 255);
 }
