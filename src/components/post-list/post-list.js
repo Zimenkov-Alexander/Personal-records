@@ -3,7 +3,7 @@ import PostListItem from '../post-list-item/post-list-item';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 import './post-list.css';
 
-const PostList = ({posts, onDelete}) => {
+const PostList = ({posts, onDelete, onToggleImport, onToggleLiked}) => {
 
 	const elements = posts.map((item) => {
 		return (
@@ -11,7 +11,10 @@ const PostList = ({posts, onDelete}) => {
 				<PostListItem
 					label={item.label}
 					important={item.important}
+					like={item.like}
 					onDelete={() => onDelete(item.id)}
+					onToggleImport={() => onToggleImport(item.id)}
+					onToggleLiked={() => onToggleLiked(item.id)}
 				/>
 				{/* <PostListItem {...item}/> ES8 */ } 
 			</ListGroupItem>

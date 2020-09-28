@@ -6,8 +6,31 @@
   border-radius: 40px;
   background-color: #3a3b3c;;
 }
-
 .btn-outline-secondary{
-	color: rgba(190, 190, 190);
-	border-color: rgba(190, 190, 190);
+	color: #9e9e9e;
+	border-color: #9e9e9e;
+}
+.btn-outline-secondary:hover{
+	color: #ffffff;
+	border-color: #9e9e9e;
+	background-color: #9e9e9e;
+}
+.info{
+	color: #4cacc9;
+	border-color: #4cacc9;
+}
+.info:hover{
+	color: #ffffff;
+	border-color: #4cacc9;
+	background-color: #4cacc9;
+}
+.bottom-panel .btn-outline-secondary{
+	color: hsl(0, 0%, 80%);
+	border-color: #ffffff;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.bottom-panel .btn-outline-secondary:hover{
+	color: #ffffff;
+	border-color: #ffffff;
+	background-color: rgba(0, 0, 0, 0.6);
 }

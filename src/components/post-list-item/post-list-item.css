@@ -47,11 +47,17 @@
     transform: translateX(0px);
 }
 .app-list-item.important .app-list-item-label {
-  color: #aeaeae;
+  color: hsl(0, 0%, 90%);
 }
+.app-list-item.like .app-list-item-label {
+	color: hsl(0, 0%, 40%);
+	text-decoration: line-through;
+}
+
 .app-list-item.important .btn-star {
     color: #aeaeae;
 }
+
 .btn-sm{
 	background-color:white;
 }

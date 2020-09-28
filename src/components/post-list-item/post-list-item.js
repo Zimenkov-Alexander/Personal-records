@@ -2,35 +2,13 @@ import React, { Component } from 'react';
 import './post-list-item.css';
 
 export default class PostListItem extends Component{
-	constructor(props){
-		super(props);
-		this.state = {
-			important: false,
-			like: false
-		}
-		this.onImportant = this.onImportant.bind(this);
-		this.onLike = this.onLike.bind(this);
-	}
-	
-	onImportant(){
-		this.setState(({important}) => ({
-			important: !important
-		}))
-	}
-
-	onLike(){
-		this.setState(({like}) => ({
-			like: !like
-		}))
-	}
 
 	render(){
-		const {label, onDelete} = this.props;
-		const {important, like} = this.state;
+		const {label, onDelete, onToggleImport, onToggleLiked,  important, like} = this.props;
 
 		let classNames = 'app-list-item d-flex justify-content-between';
-		
-		if (important) {
+		// console.log(like);
+		if (!important) {
 			classNames += ' important';
 			}
 		if (like) {
@@ -39,12 +17,12 @@ export default class PostListItem extends Component{
 
 		return (
 			<div className={classNames}>
-				<span onClick={this.onLike} className="app-list-item-label">
+				<span onClick={onToggleLiked} className="app-list-item-label">
 					{label}
 				</span>
 				<div className="d-flex justify-content-center align-items-center">
 					<i className="fa fa-check"></i>
-					<button onClick={this.onImportant}  type="button" className="btn-star btn-sm">
+					<button onClick={onToggleImport}  type="button" className="btn-star btn-sm">
 						<i className="fa fa-star"></i>
 					</button>
 					<button onClick={onDelete} type="button" className="btn-trash btn-sm">
